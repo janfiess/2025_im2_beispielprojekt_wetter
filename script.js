@@ -59,12 +59,6 @@ async function displayCityDetailsById(id) {
 
 }
 
-async function switchActiveCityById(id) {
-
-    // zeige die Detaildaten anhand der ID der Stadt an
-    await displayCityDetailsById(id);
-
-}
 
 // Hilfs-Funktionen
 async function loadCityDataById(id) {
@@ -188,7 +182,7 @@ async function initCityButtons() {
         // dem Button einen EventListener hinzufügen
         button.addEventListener('click', async function() {
             const id = button.id;
-            await switchActiveCityById(id);
+            await displayCityDetailsById(id);
         })
 
         // button im HTML anzeigen
